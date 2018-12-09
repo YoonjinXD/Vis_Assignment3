@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
 
-      <title>Assignment3_YJ_Chung</title>
+      <title>Vis_Assignment3_YJ_Chung</title>
 
       <!-- Required meta tags -->
       <meta charset="utf-8">
@@ -122,14 +122,18 @@
                   </div>
 
               </div>
+
               <div class="ui segment">
                   <div id="Male"></div>
                   <div id="Female" style="display: none"></div>
               </div>
+
           </div>
       </div>
-    
-    <div class="ui inverted vertical footer segment">
+
+      <div class="ui hidden divider"></div>
+
+      <div class="ui inverted vertical footer segment">
           <div class="ui container">
               <div class="ui stackable inverted divided equal height stackable grid">
                   <div class="eight wide column">
@@ -505,6 +509,7 @@
               .attr('class', 'line')
               .attr('d', d => line(d.values))
               .style('stroke', (d, i) => color(i))
+              .style("stroke-width", lineStroke)
               .style('opacity', lineOpacity)
               .on("mouseover", function(d) {
                   d3.selectAll('.line')
@@ -604,7 +609,7 @@
           /* Add SVG */
           var svge = d3.select("#Female").append("svg")
               .attr("width", (width+margin)+"rem")
-              .attr("height", (height+margin)+"rem")
+              .attr("height", (height+margin)+"px")
               .append('g')
               .attr("transform", `translate(${margin}, ${margin})`);
 
@@ -637,6 +642,7 @@
               .attr('class', 'line')
               .attr('d', d => line(d.values))
               .style('stroke', (d, i) => color(i))
+              .style("stroke-width", lineStroke)
               .style('opacity', lineOpacity)
               .on("mouseover", function(d) {
                   d3.selectAll('.line')
