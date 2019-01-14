@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Skills sunburst</title>
+    <!-- Semantic UI !-->
+    <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="skill.css"/>
+</head>
+<body>
+
+<!-- No header !-->
+
+<div class="ui hidden divider"></div>
+
+
+<div class="ui container">
+    <!-- Title !-->
+    <h2 class="ui inverted center aligned header">
+        <div class="content">
+            Rainfall Analysis
+            <div class="sub header">in Denmark</div>
+        </div>
+    </h2>
+    <!-- Menu !-->
+
+    <div class="ui two pointing item menu">
+        <a class="active item" data-tab="first">Monthly Rainfall</a>
+        <a class="item" data-tab="second">The impact</a>
+    </div>
+
+    <!-- Main content !-->
+    <div class="ui bottom active tab vertical segment" data-tab="first">
+        <div class="ui grid">
+            <div class="ui ten wide column">
+                <div id="aster"></div>
+            </div>
+            <div class="ui six wide column">
+                <div class="ui statistics">
+                    <div class="ui statistic">
+                        <div class="label">
+                            Total
+                        </div>
+                        <div class="value">
+                            <i class="plane icon"></i>
+                            67
+                        </div>
+                        <div class="label">
+                            mm per year
+                        </div>
+                    </div>
+                    <div class="ui divider"></div>
+                    <div class="ui statistic">
+                        <div class="value">
+                            October
+                        </div>
+                        <div class="label">
+                            The most rainy month
+                        </div>
+                    </div>
+                    <div class="ui divider"></div>
+                    <div class="ui statistic">
+                        <div class="value">
+                            April
+                        </div>
+                        <div class="label">
+                            The least rainy month
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui bottom tab vertical segment" data-tab="second">
+        <div id="skills">
+            <div id="skillmap">
+                <div class="skills-wrapper">
+                    <div class="ui grid">
+                        <div class="ui eight wide column"><div class="skills-sunburst"></div></div>
+                        <div class="ui eight wide column">
+                            <div class="skills-chart" id="chart">
+                                <div id="skills-chart-breadcrumb"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui twelve wide column">
+
+
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS, then Semantic !-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="semantic/semantic.min.js"></script>
+
+<!-- Semantic Scripts !-->
+<script>
+    $('.menu .item')
+        .tab()
+    ;
+</script>
+
+<!-- d3 Scripts !-->
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="skillsdata.js"></script>
+<script type="text/javascript" src="skill.js"></script>
+<script type="text/javascript">
+    // Hack to make this example display correctly in an iframe on bl.ocks.org
+    d3.select(self.frameElement).style("height", "700px");
+</script>
+
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script src="drawAster.js"></script>
+</body>
+</html>

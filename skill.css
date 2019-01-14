@@ -1,0 +1,105 @@
+/* -- Common CSS -- */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    background-color: cadetblue;
+    margin-top: 10px;
+}
+
+
+/* -- 1. Sunbrust plot & Line chart -- */
+#skillmap .skills-sunburst svg {
+    font: 11px 'Source Sans Pro', sans-serif;
+    font-weight: 900;
+    cursor: pointer;
+}
+#skillmap .skills-chart {
+    float: right;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    margin: 3.5rem 0 0 0;
+    overflow: fragments;
+}
+#skillmap .skills-chart .breadcumb-text {
+    font-size: 13px;
+    font-weight: 700;
+}
+#skillmap .skills-chart #skills-chart-line {
+    fill: none;
+    stroke-width: 3.5px;
+}
+#skillmap .skills-chart .axis path,
+#skillmap .skills-chart .axis line {
+    fill: none;
+}
+#skillmap .skills-chart .x-axis path,
+#skillmap .skills-chart .y-axis path {
+    stroke: #444;
+    stroke-width: 1px;
+    shape-rendering: geometricPrecision;
+}
+
+
+/* -- 2. Aster plot -- */
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.bar {
+    fill: orange;
+}
+
+.solidArc:hover {
+    fill: orangered ;
+}
+
+.solidArc {
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.x.axis path {
+    display: none;
+}
+
+.aster-score {
+    line-height: 1;
+    font-weight: bold;
+    font-size: 500%;
+}
+
+.d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+}
+
