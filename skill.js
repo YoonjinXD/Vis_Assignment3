@@ -85,14 +85,15 @@ function getcolor(color) {
     return (.100 * color.r + .300 * color.g + .60 * color.b)
 }
 function k(a) {
-    var c = ["#4cc3d9", "#f4bf56", "#7bc8a4", "#93648d", "#d69fa2", "#b8f791"],
+    var c = ["#4cc3d9", "#b8f791", "#7bc8a4", "#93648d", "#d69fa2", "#F49D60", "#fff699"],
         d = [-.1, -.05, 0];
 
     if (1 == a.depth) {
-        return "#fff8e8"
+        var e =  c[coloralternative];
+        return coloralternative++, e
     }
     if (2 == a.depth) {
-        var e =  c[coloralternative % 6];
+        var e =  c[coloralternative % 7];
         return coloralternative++, e
     }
     if (a.depth > 2) {
@@ -250,7 +251,7 @@ var t = function (a, b) {
         .innerRadius(function (a) { return rad / Math.PI * a.depth })
         .outerRadius(function (a) { return rad / Math.PI * (a.depth + 1) - 1 });
 
-var coloralternative = 1
+var coloralternative = 0
 var firstlayer_count =0
 initbreadcrumb();
 var path = sunburst
